@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Driver on Demand in India | Personal Driver for Your Car | Chauffit</title>
+  <meta name="description" content="Hire a trained driver to drive your own car. Daily travel, late nights, airport trips, corporate needs. Join the waitlist.">
+  <meta name="keywords" content="driver on demand, personal driver, hire a driver, driver for my car, night driver service, corporate driver service, on-demand driver India">
+  <link rel="canonical" href="https://chauffit.com">
+  <meta property="og:title" content="Driver on Demand in India | Personal Driver for Your Car | Chauffit">
+  <meta property="og:description" content="Hire a trained driver to drive your own car. Daily travel, late nights, airport trips, corporate needs. Join the waitlist.">
+  <meta property="og:type" content="website">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f7ff',
+              100: '#e0effe',
+              200: '#bae0fd',
+              300: '#7cc8fb',
+              400: '#36adf6',
+              500: '#0c93e7',
+              600: '#0074c5',
+              700: '#015da0',
+              800: '#064f84',
+              900: '#0b426e',
+              950: '#072a49',
+            },
+            surface: {
+              50: '#f8f9fa',
+              100: '#f1f3f5',
+              200: '#e9ecef',
+              300: '#dee2e6',
+              400: '#ced4da',
+              500: '#adb5bd',
+              600: '#868e96',
+              700: '#495057',
+              800: '#343a40',
+              900: '#212529',
+            }
+          },
+          fontFamily: {
+            sans: ['"DM Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+            display: ['"General Sans"', '"DM Sans"', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <style>
+    * { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      background: linear-gradient(160deg, #f8fbff 0%, #ffffff 30%, #fef9f4 55%, #f4f0ff 80%, #f0f7ff 100%);
+      background-attachment: fixed;
+    }
+    .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+    .modal-backdrop { opacity: 0; transition: opacity 0.3s ease; pointer-events: none; }
+    .modal-backdrop.active { opacity: 1; pointer-events: all; }
+    .modal-content { transform: translateY(16px) scale(0.98); opacity: 0; transition: transform 0.3s ease, opacity 0.3s ease; }
+    .modal-backdrop.active .modal-content { transform: translateY(0) scale(1); opacity: 1; }
+    .step-line { position: absolute; left: 23px; top: 48px; bottom: 0; width: 2px; background: linear-gradient(to bottom, #bae0fd, transparent); }
+    .nav-blur { backdrop-filter: blur(16px) saturate(180%); -webkit-backdrop-filter: blur(16px) saturate(180%); }
+    .hero-gradient { background: radial-gradient(ellipse 90% 70% at 50% -5%, rgba(12, 147, 231, 0.06) 0%, transparent 60%), radial-gradient(ellipse 50% 50% at 80% 20%, rgba(167, 139, 250, 0.04) 0%, transparent 70%); }
+    .tag-scroll { animation: tagScroll 30s linear infinite; }
+    @keyframes tagScroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .tier-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -12px rgba(0,0,0,0.08); }
+    .tier-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  </style>
+</head>
+<body class="text-surface-900 antialiased">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 left-0 right-0 z-50 nav-blur bg-white/70 border-b border-surface-100/50" id="navbar">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2">
+        <div class="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center">
+          <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"/></svg>
+        </div>
+        <span class="text-lg font-bold tracking-tight text-surface-900">Chauffit</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8 text-sm text-surface-600">
+        <a href="#how" class="hover:text-surface-900 transition-colors">How It Works</a>
+        <a href="#safety" class="hover:text-surface-900 transition-colors">Safety</a>
+        <a href="#drivers" class="hover:text-surface-900 transition-colors">Drive With Us</a>
+        <a href="#faq" class="hover:text-surface-900 transition-colors">FAQ</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <button onclick="openModal()" class="bg-surface-900 text-white text-sm font-medium px-5 py-2.5 rounded-xl hover:bg-surface-800 transition-colors">
+          Join Waitlist
+        </button>
+        <button class="md:hidden p-2 text-surface-600" onclick="toggleMobileMenu()">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-surface-100 bg-white/95 nav-blur">
+      <div class="px-6 py-4 flex flex-col gap-3 text-sm text-surface-600">
+        <a href="#how" onclick="closeMobileMenu()" class="py-2 hover:text-surface-900">How It Works</a>
+        <a href="#safety" onclick="closeMobileMenu()" class="py-2 hover:text-surface-900">Safety</a>
+        <a href="#drivers" onclick="closeMobileMenu()" class="py-2 hover:text-surface-900">Drive With Us</a>
+        <a href="#faq" onclick="closeMobileMenu()" class="py-2 hover:text-surface-900">FAQ</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 hero-gradient overflow-hidden">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="max-w-3xl fade-up">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-brand-50 border border-brand-100 rounded-full text-brand-700 text-xs font-medium mb-6">
+          <span class="w-1.5 h-1.5 bg-brand-500 rounded-full animate-pulse"></span>
+          Launching soon across India
+        </div>
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-surface-900 leading-[1.08]">
+          Your Personal Driver,<br>
+          <span class="text-brand-600">On Demand.</span>
+        </h1>
+        <p class="mt-6 text-lg md:text-xl text-surface-500 leading-relaxed max-w-xl">
+          Hire a trained driver to drive your own car — for daily travel, late nights, airports, and corporate trips.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <button onclick="openModal()" class="bg-brand-600 text-white font-semibold px-7 py-3.5 rounded-xl text-sm hover:bg-brand-700 transition-all shadow-lg shadow-brand-600/20 hover:shadow-brand-600/30">
+            Join the Waitlist
+          </button>
+          <a href="#how" class="bg-white text-surface-700 font-medium px-7 py-3.5 rounded-xl text-sm border border-surface-200 hover:border-surface-300 hover:bg-surface-50 transition-all">
+            How It Works
+          </a>
+        </div>
+      </div>
+      <!-- Hero Visual -->
+      <div class="mt-16 md:mt-20 fade-up">
+        <div class="relative bg-surface-50 rounded-2xl border border-surface-200 overflow-hidden">
+          <div class="p-6 md:p-10 flex flex-col md:flex-row gap-6 md:gap-10">
+            <div class="flex-1 space-y-4">
+              <div class="bg-white rounded-xl border border-surface-200 p-4 shadow-sm">
+                <div class="flex items-center gap-3 mb-3">
+                  <div class="w-10 h-10 rounded-full bg-brand-50 flex items-center justify-center">
+                    <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg>
+                  </div>
+                  <div>
+                    <p class="text-xs text-surface-400 font-medium">PICKUP</p>
+                    <p class="text-sm font-semibold text-surface-800">Koramangala, Bengaluru</p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center">
+                    <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+                  </div>
+                  <div>
+                    <p class="text-xs text-surface-400 font-medium">DROP</p>
+                    <p class="text-sm font-semibold text-surface-800">Kempegowda Intl. Airport</p>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-white rounded-xl border border-surface-200 p-4 shadow-sm flex items-center gap-4">
+                <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center">
+                  <svg class="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+                </div>
+                <div class="flex-1">
+                  <p class="text-xs text-surface-400 font-medium">ETA</p>
+                  <p class="text-sm font-semibold text-surface-800">Driver arriving in 8 min</p>
+                </div>
+                <span class="text-xs bg-green-50 text-green-700 font-medium px-2.5 py-1 rounded-full">Live</span>
+              </div>
+            </div>
+            <div class="flex-1 flex items-center justify-center">
+              <div class="w-full max-w-xs">
+                <div class="bg-white rounded-xl border border-surface-200 p-5 shadow-sm text-center">
+                  <div class="w-16 h-16 mx-auto bg-brand-50 rounded-full flex items-center justify-center mb-4">
+                    <svg class="w-8 h-8 text-brand-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"/></svg>
+                  </div>
+                  <p class="text-sm font-semibold text-surface-800">Rajesh K.</p>
+                  <p class="text-xs text-surface-400 mt-0.5">Executive Driver</p>
+                  <div class="flex items-center justify-center gap-1 mt-2">
+                    <svg class="w-3.5 h-3.5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 0 0 .95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 0 0-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 0 0-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 0 0-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 0 0 .951-.69l1.07-3.292Z"/></svg>
+                    <span class="text-xs font-medium text-surface-600">4.9</span>
+                    <span class="text-xs text-surface-400">(342 trips)</span>
+                  </div>
+                  <div class="mt-4 flex gap-2">
+                    <span class="text-xs bg-surface-50 text-surface-600 px-2.5 py-1 rounded-full border border-surface-100">Verified</span>
+                    <span class="text-xs bg-surface-50 text-surface-600 px-2.5 py-1 rounded-full border border-surface-100">Trained</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT IS CHAUFFIT -->
+  <section class="py-20 md:py-28">
+    <div class="max-w-6xl mx-auto px-6 text-center fade-up">
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Driver Services Made Simple.</h2>
+      <p class="mt-4 text-surface-500 text-lg max-w-2xl mx-auto leading-relaxed">
+        Connect with verified drivers who drive your car, on demand. Book instantly or by the hour — all in-app.
+      </p>
+      <div class="mt-14 grid md:grid-cols-3 gap-6">
+        <div class="bg-surface-50 rounded-2xl p-6 text-left border border-surface-100">
+          <div class="w-11 h-11 bg-brand-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
+          </div>
+          <h3 class="font-semibold text-surface-800">Instant Booking</h3>
+          <p class="mt-2 text-sm text-surface-500 leading-relaxed">Need a driver now? Book in seconds. A verified driver arrives at your door.</p>
+        </div>
+        <div class="bg-surface-50 rounded-2xl p-6 text-left border border-surface-100">
+          <div class="w-11 h-11 bg-amber-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+          </div>
+          <h3 class="font-semibold text-surface-800">Hourly Hire</h3>
+          <p class="mt-2 text-sm text-surface-500 leading-relaxed">Book a driver for 2, 4, 6, or 8 hours. Perfect for errands, events, and outstation trips.</p>
+        </div>
+        <div class="bg-surface-50 rounded-2xl p-6 text-left border border-surface-100">
+          <div class="w-11 h-11 bg-green-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/></svg>
+          </div>
+          <h3 class="font-semibold text-surface-800">Your Car, Our Driver</h3>
+          <p class="mt-2 text-sm text-surface-500 leading-relaxed">The driver comes to you and drives your vehicle. Fully insured and accountable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY USE IT -->
+  <section class="py-20 md:py-28 bg-white/40 border-y border-surface-100/60">
+    <div class="max-w-6xl mx-auto px-6 text-center fade-up">
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight">When You Don't Want to Drive.</h2>
+      <p class="mt-4 text-surface-500 text-lg max-w-xl mx-auto">Access a reliable personal driver without hiring full-time staff.</p>
+      <div class="mt-12 overflow-hidden relative">
+        <div class="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white/60 to-transparent z-10"></div>
+        <div class="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white/60 to-transparent z-10"></div>
+        <div class="flex tag-scroll whitespace-nowrap">
+          <div class="flex gap-3 mr-3">
+            <span class="inline-flex items-center gap-2 px-5 py-3 bg-white rounded-xl border border-surface-200 text-sm font-medium text-surface-700">
+              <svg class="w-4 h-4 text-surface-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"/></svg>
+              Late Nights
+            </span>
+            <span class="inline-flex items-center gap-2 px-5 py-3 bg-white rounded-xl border border-surface-200 text-sm font-medium text-surface-700">
+              <svg class="w-4 h-4 text-surface-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"/></svg>
+              Airport Runs
+            </span>
+            <span class="inline-flex items-center gap-2 px-5 py-3 bg-white rounded-xl border border-surface-200 text-sm font-medium text-surface-700">
+              <svg class="w-4 h-4 text-surface-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0"/></svg>
+              Corporate Travel
+            </span>
+            <span class="inline-flex items-center gap-2 px-5 py-3 bg-white rounded-xl border border-surface-200 text-sm font-medium text-surface-700">
+              <svg class="w-4 h-4 text-surface-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"/></svg>
+              Errands
+            </span>
+            <span class="inline-flex items-center gap-2 px-5 py-3 bg-white rounded-xl border border-surface-200 text-sm font-medium text-surface-700">
+              <svg class="w-4 h-4 text-surface-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"/></svg>
+              Family Events
+            </span>
+            <span class="inline-flex items-center gap-2 px-5 py-3 bg-white rounded-xl border border-surface-200 text-sm font-medium text-surface-700">
+              <svg class="w-4 h-4 text-surface-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z"/></svg>
+              Long-Distance
+            </span>
+            <span class="inline-flex items-center gap-2 px-5 py-3 bg-white rounded-xl border border-surface-200 text-sm font-medium text-surface-700">
+              <svg class="w-4 h-4 text-surface-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+              Daily Commute
+            </span>
+          </div>
+          <div class="flex gap-3" aria-hidden="true">
+            <span class="inline-flex items-center gap-2 px-5 py-3 bg-white rounded-xl border border-surface-200 text-sm font-medium text-surface-700">
+              <svg class="w-4 h-4 text-surface-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"/></svg>
+              Late Nights
+            </span>
+            <span class="inline-flex items-center gap-2 px-5 py-3 bg-white rounded-xl border border-surface-200 text-sm font-medium text-surface-700">
+              <svg class="w-4 h-4 text-surface-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"/></svg>
+              Airport Runs
+            </span>
+            <span class="inline-flex items-center gap-2 px-5 py-3 bg-white rounded-xl border border-surface-200 text-sm font-medium text-surface-700">
+              <svg class="w-4 h-4 text-surface-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0"/></svg>
+              Corporate Travel
+            </span>
+            <span class="inline-flex items-center gap-2 px-5 py-3 bg-white rounded-xl border border-surface-200 text-sm font-medium text-surface-700">
+              <svg class="w-4 h-4 text-surface-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"/></svg>
+              Errands
+            </span>
+            <span class="inline-flex items-center gap-2 px-5 py-3 bg-white rounded-xl border border-surface-200 text-sm font-medium text-surface-700">
+              <svg class="w-4 h-4 text-surface-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"/></svg>
+              Family Events
+            </span>
+            <span class="inline-flex items-center gap-2 px-5 py-3 bg-white rounded-xl border border-surface-200 text-sm font-medium text-surface-700">
+              <svg class="w-4 h-4 text-surface-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z"/></svg>
+              Long-Distance
+            </span>
+            <span class="inline-flex items-center gap-2 px-5 py-3 bg-white rounded-xl border border-surface-200 text-sm font-medium text-surface-700">
+              <svg class="w-4 h-4 text-surface-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+              Daily Commute
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" class="py-20 md:py-28">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center fade-up">
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight">How Chauffit Works</h2>
+        <p class="mt-4 text-surface-500 text-lg">Simple. Transparent. App-based.</p>
+      </div>
+      <div class="mt-14 max-w-xl mx-auto fade-up">
+        <div class="relative">
+          <!-- Step 1 -->
+          <div class="flex gap-5 pb-10 relative">
+            <div class="relative z-10 flex-shrink-0">
+              <div class="w-12 h-12 bg-brand-600 text-white rounded-xl flex items-center justify-center font-bold text-sm shadow-lg shadow-brand-600/20">1</div>
+            </div>
+            <div class="pt-2.5">
+              <h3 class="font-semibold text-surface-800">Enter destination or choose hourly hire</h3>
+              <p class="mt-1 text-sm text-surface-500">Set where you're going or book a driver by the hour.</p>
+            </div>
+            <div class="step-line"></div>
+          </div>
+          <!-- Step 2 -->
+          <div class="flex gap-5 pb-10 relative">
+            <div class="relative z-10 flex-shrink-0">
+              <div class="w-12 h-12 bg-brand-600 text-white rounded-xl flex items-center justify-center font-bold text-sm shadow-lg shadow-brand-600/20">2</div>
+            </div>
+            <div class="pt-2.5">
+              <h3 class="font-semibold text-surface-800">Select driver category</h3>
+              <p class="mt-1 text-sm text-surface-500">Choose between Standard or Executive based on your needs.</p>
+            </div>
+            <div class="step-line"></div>
+          </div>
+          <!-- Step 3 -->
+          <div class="flex gap-5 pb-10 relative">
+            <div class="relative z-10 flex-shrink-0">
+              <div class="w-12 h-12 bg-brand-600 text-white rounded-xl flex items-center justify-center font-bold text-sm shadow-lg shadow-brand-600/20">3</div>
+            </div>
+            <div class="pt-2.5">
+              <h3 class="font-semibold text-surface-800">Driver arrives at your location</h3>
+              <p class="mt-1 text-sm text-surface-500">A verified driver comes to you and drives your vehicle.</p>
+            </div>
+            <div class="step-line"></div>
+          </div>
+          <!-- Step 4 -->
+          <div class="flex gap-5 relative">
+            <div class="relative z-10 flex-shrink-0">
+              <div class="w-12 h-12 bg-brand-600 text-white rounded-xl flex items-center justify-center font-bold text-sm shadow-lg shadow-brand-600/20">4</div>
+            </div>
+            <div class="pt-2.5">
+              <h3 class="font-semibold text-surface-800">Track live in-app</h3>
+              <p class="mt-1 text-sm text-surface-500">Real-time trip monitoring with ETA and route details.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOURLY HIRE -->
+  <section class="py-20 md:py-28 bg-white/40 border-y border-surface-100/60">
+    <div class="max-w-6xl mx-auto px-6 fade-up">
+      <div class="text-center">
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Hire by the Hour</h2>
+        <p class="mt-4 text-surface-500 text-lg">Flexible hourly packages for every need.</p>
+      </div>
+      <div class="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="bg-white rounded-2xl border border-surface-200 p-6 text-center hover:border-brand-200 hover:shadow-lg hover:shadow-brand-600/5 transition-all cursor-default">
+          <div class="text-3xl font-bold text-brand-600">2<span class="text-lg ml-0.5">hr</span></div>
+          <p class="mt-2 text-sm text-surface-500">Quick trips & errands</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-surface-200 p-6 text-center hover:border-brand-200 hover:shadow-lg hover:shadow-brand-600/5 transition-all cursor-default">
+          <div class="text-3xl font-bold text-brand-600">4<span class="text-lg ml-0.5">hr</span></div>
+          <p class="mt-2 text-sm text-surface-500">Shopping & meetings</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-surface-200 p-6 text-center hover:border-brand-200 hover:shadow-lg hover:shadow-brand-600/5 transition-all cursor-default">
+          <div class="text-3xl font-bold text-brand-600">6<span class="text-lg ml-0.5">hr</span></div>
+          <p class="mt-2 text-sm text-surface-500">Business & events</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-surface-200 p-6 text-center hover:border-brand-200 hover:shadow-lg hover:shadow-brand-600/5 transition-all cursor-default">
+          <div class="text-3xl font-bold text-brand-600">8<span class="text-lg ml-0.5">hr</span></div>
+          <p class="mt-2 text-sm text-surface-500">Full day & outstation</p>
+        </div>
+      </div>
+      <div class="mt-8 flex flex-wrap justify-center gap-2">
+        <span class="text-xs bg-white text-surface-600 px-3 py-1.5 rounded-full border border-surface-200">Weddings</span>
+        <span class="text-xs bg-white text-surface-600 px-3 py-1.5 rounded-full border border-surface-200">Business meetings</span>
+        <span class="text-xs bg-white text-surface-600 px-3 py-1.5 rounded-full border border-surface-200">Shopping</span>
+        <span class="text-xs bg-white text-surface-600 px-3 py-1.5 rounded-full border border-surface-200">Outstation trips</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SAFETY -->
+  <section id="safety" class="py-20 md:py-28">
+    <div class="max-w-6xl mx-auto px-6 fade-up">
+      <div class="text-center">
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Verified Drivers. Accountable Trips.</h2>
+        <p class="mt-4 text-surface-500 text-lg max-w-xl mx-auto">Every driver undergoes rigorous vetting before they ever touch your keys.</p>
+      </div>
+      <div class="mt-14 grid md:grid-cols-5 gap-4">
+        <div class="bg-surface-50 rounded-2xl p-5 border border-surface-100 text-center">
+          <div class="w-10 h-10 mx-auto bg-green-50 rounded-xl flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Zm6-10.125a1.875 1.875 0 1 1-3.75 0 1.875 1.875 0 0 1 3.75 0Zm1.294 6.336a6.721 6.721 0 0 1-3.17.789 6.721 6.721 0 0 1-3.168-.789 3.376 3.376 0 0 1 6.338 0Z"/></svg>
+          </div>
+          <h3 class="text-sm font-semibold text-surface-800">Identity Checks</h3>
+          <p class="mt-1 text-xs text-surface-500">Background verified</p>
+        </div>
+        <div class="bg-surface-50 rounded-2xl p-5 border border-surface-100 text-center">
+          <div class="w-10 h-10 mx-auto bg-blue-50 rounded-xl flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"/></svg>
+          </div>
+          <h3 class="text-sm font-semibold text-surface-800">Documents</h3>
+          <p class="mt-1 text-xs text-surface-500">Fully verified</p>
+        </div>
+        <div class="bg-surface-50 rounded-2xl p-5 border border-surface-100 text-center">
+          <div class="w-10 h-10 mx-auto bg-purple-50 rounded-xl flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342"/></svg>
+          </div>
+          <h3 class="text-sm font-semibold text-surface-800">Training</h3>
+          <p class="mt-1 text-xs text-surface-500">Skill evaluated</p>
+        </div>
+        <div class="bg-surface-50 rounded-2xl p-5 border border-surface-100 text-center">
+          <div class="w-10 h-10 mx-auto bg-amber-50 rounded-xl flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
+          </div>
+          <h3 class="text-sm font-semibold text-surface-800">Live Monitoring</h3>
+          <p class="mt-1 text-xs text-surface-500">Real-time tracking</p>
+        </div>
+        <div class="bg-surface-50 rounded-2xl p-5 border border-surface-100 text-center">
+          <div class="w-10 h-10 mx-auto bg-rose-50 rounded-xl flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-rose-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"/></svg>
+          </div>
+          <h3 class="text-sm font-semibold text-surface-800">Ratings</h3>
+          <p class="mt-1 text-xs text-surface-500">Performance tracked</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DRIVER TIERS -->
+  <section class="py-20 md:py-28 bg-white/40 border-y border-surface-100/60">
+    <div class="max-w-6xl mx-auto px-6 fade-up">
+      <div class="text-center">
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Choose the Right Driver.</h2>
+        <p class="mt-4 text-surface-500 text-lg">Drivers upgrade based on performance.</p>
+      </div>
+      <div class="mt-14 grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+        <div class="tier-card bg-white rounded-2xl border border-surface-200 p-8">
+          <div class="w-12 h-12 bg-surface-100 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-surface-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-surface-800">Standard</h3>
+          <p class="mt-2 text-surface-500 text-sm leading-relaxed">Everyday vehicles, city travel. Reliable drivers for your daily needs.</p>
+          <div class="mt-5 flex flex-wrap gap-2">
+            <span class="text-xs bg-surface-50 text-surface-600 px-3 py-1.5 rounded-full border border-surface-100">City travel</span>
+            <span class="text-xs bg-surface-50 text-surface-600 px-3 py-1.5 rounded-full border border-surface-100">Daily commute</span>
+            <span class="text-xs bg-surface-50 text-surface-600 px-3 py-1.5 rounded-full border border-surface-100">Errands</span>
+          </div>
+        </div>
+        <div class="tier-card bg-white rounded-2xl border-2 border-brand-200 p-8 relative">
+          <div class="absolute -top-3 right-6">
+            <span class="bg-brand-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Premium</span>
+          </div>
+          <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-surface-800">Executive</h3>
+          <p class="mt-2 text-surface-500 text-sm leading-relaxed">High-end vehicles, formal needs. Experienced drivers for premium service.</p>
+          <div class="mt-5 flex flex-wrap gap-2">
+            <span class="text-xs bg-brand-50 text-brand-700 px-3 py-1.5 rounded-full border border-brand-100">Corporate</span>
+            <span class="text-xs bg-brand-50 text-brand-700 px-3 py-1.5 rounded-full border border-brand-100">Luxury vehicles</span>
+            <span class="text-xs bg-brand-50 text-brand-700 px-3 py-1.5 rounded-full border border-brand-100">Formal events</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DRIVE WITH US -->
+  <section id="drivers" class="py-20 md:py-28">
+    <div class="max-w-6xl mx-auto px-6 fade-up">
+      <div class="text-center">
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Drive with Chauffit</h2>
+        <p class="mt-4 text-surface-500 text-lg max-w-xl mx-auto">Flexible earning for trained drivers and bikers.</p>
+      </div>
+      <div class="mt-14 grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <!-- Drivers -->
+        <div class="bg-surface-50 rounded-2xl border border-surface-100 p-7">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 bg-brand-50 rounded-xl flex items-center justify-center">
+              <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"/></svg>
+            </div>
+            <h3 class="font-bold text-surface-800 text-lg">For Drivers</h3>
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-center gap-3">
+              <div class="w-6 h-6 bg-brand-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-xs font-bold text-brand-700">1</span>
+              </div>
+              <span class="text-sm text-surface-600">Apply online</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-6 h-6 bg-brand-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-xs font-bold text-brand-700">2</span>
+              </div>
+              <span class="text-sm text-surface-600">Upload documents</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-6 h-6 bg-brand-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-xs font-bold text-brand-700">3</span>
+              </div>
+              <span class="text-sm text-surface-600">Get verified</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-6 h-6 bg-brand-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-xs font-bold text-brand-700">4</span>
+              </div>
+              <span class="text-sm text-surface-600">Complete training</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-green-700" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+              </div>
+              <span class="text-sm font-medium text-surface-800">Start earning</span>
+            </div>
+          </div>
+        </div>
+        <!-- Bikers -->
+        <div class="bg-surface-50 rounded-2xl border border-surface-100 p-7">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 bg-amber-50 rounded-xl flex items-center justify-center">
+              <svg class="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"/></svg>
+            </div>
+            <h3 class="font-bold text-surface-800 text-lg">For Bikers</h3>
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-center gap-3">
+              <div class="w-6 h-6 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-xs font-bold text-amber-700">1</span>
+              </div>
+              <span class="text-sm text-surface-600">Sign up online</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-6 h-6 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-xs font-bold text-amber-700">2</span>
+              </div>
+              <span class="text-sm text-surface-600">Upload documents</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-6 h-6 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-xs font-bold text-amber-700">3</span>
+              </div>
+              <span class="text-sm text-surface-600">Get verified</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-green-700" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+              </div>
+              <span class="text-sm font-medium text-surface-800">Start earning</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-10 text-center">
+        <button onclick="openDriverModal()" class="bg-surface-900 text-white font-semibold px-7 py-3.5 rounded-xl text-sm hover:bg-surface-800 transition-all">
+          Get Notified When Onboarding Opens
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-20 md:py-28 bg-white/40 border-y border-surface-100/60">
+    <div class="max-w-3xl mx-auto px-6 fade-up">
+      <div class="text-center">
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Frequently Asked Questions</h2>
+      </div>
+      <div class="mt-12 space-y-3" id="faqContainer">
+        <div class="faq-item bg-white rounded-xl border border-surface-200 overflow-hidden" data-faq-open="true">
+          <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between p-5 text-left">
+            <span class="font-medium text-surface-800 text-sm">What is driver on demand?</span>
+            <svg class="w-4 h-4 text-surface-400 faq-chevron transition-transform" style="transform:rotate(180deg)" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+          </button>
+          <div class="faq-answer px-5 pb-5">
+            <p class="text-sm text-surface-500 leading-relaxed">Hire a trained driver for your own car, whenever needed. No commitments, no contracts — just book when you need one.</p>
+          </div>
+        </div>
+        <div class="faq-item bg-white rounded-xl border border-surface-200 overflow-hidden" data-faq-open="true">
+          <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between p-5 text-left">
+            <span class="font-medium text-surface-800 text-sm">Can I hire for a few hours?</span>
+            <svg class="w-4 h-4 text-surface-400 faq-chevron transition-transform" style="transform:rotate(180deg)" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+          </button>
+          <div class="faq-answer px-5 pb-5">
+            <p class="text-sm text-surface-500 leading-relaxed">Yes — flexible hourly packages are available. Choose from 2, 4, 6, or 8-hour slots based on your needs.</p>
+          </div>
+        </div>
+        <div class="faq-item bg-white rounded-xl border border-surface-200 overflow-hidden" data-faq-open="true">
+          <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between p-5 text-left">
+            <span class="font-medium text-surface-800 text-sm">Is this full-time?</span>
+            <svg class="w-4 h-4 text-surface-400 faq-chevron transition-transform" style="transform:rotate(180deg)" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+          </button>
+          <div class="faq-answer px-5 pb-5">
+            <p class="text-sm text-surface-500 leading-relaxed">No. Chauffit is entirely on-demand and app-based. Use it when you need it — no full-time commitments required.</p>
+          </div>
+        </div>
+        <div class="faq-item bg-white rounded-xl border border-surface-200 overflow-hidden" data-faq-open="true">
+          <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between p-5 text-left">
+            <span class="font-medium text-surface-800 text-sm">Do drivers use my car?</span>
+            <svg class="w-4 h-4 text-surface-400 faq-chevron transition-transform" style="transform:rotate(180deg)" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+          </button>
+          <div class="faq-answer px-5 pb-5">
+            <p class="text-sm text-surface-500 leading-relaxed">Yes. Your vehicle, their driving. The driver comes to your location and drives your own car to the destination.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / LAUNCH -->
+  <section class="py-20 md:py-28">
+    <div class="max-w-6xl mx-auto px-6 fade-up">
+      <div class="bg-surface-900 rounded-3xl p-10 md:p-16 text-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-brand-600/10 via-transparent to-brand-600/5"></div>
+        <div class="relative z-10">
+          <h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight">Launching City by City.</h2>
+          <p class="mt-4 text-surface-400 text-lg max-w-md mx-auto">Join the waitlist. Get notified when we launch near you.</p>
+          <button onclick="openModal()" class="mt-8 bg-white text-surface-900 font-semibold px-8 py-3.5 rounded-xl text-sm hover:bg-surface-100 transition-all">
+            Join the Waitlist
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-surface-100/60 py-12 bg-white/30">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row md:items-start justify-between gap-8">
+        <div class="max-w-md">
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-7 h-7 bg-brand-600 rounded-lg flex items-center justify-center">
+              <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"/></svg>
+            </div>
+            <span class="font-bold text-surface-900">Chauffit</span>
+          </div>
+          <p class="text-sm text-surface-500 leading-relaxed">Chauffit is a driver-on-demand platform connecting customers with verified personal drivers for their own vehicles. Built for daily commutes, corporate trips, late nights, and hourly bookings.</p>
+        </div>
+        <div class="flex gap-12 text-sm">
+          <div>
+            <h4 class="font-semibold text-surface-800 mb-3">Product</h4>
+            <div class="space-y-2">
+              <a href="#how" class="block text-surface-500 hover:text-surface-700 transition-colors">How It Works</a>
+              <a href="#safety" class="block text-surface-500 hover:text-surface-700 transition-colors">Safety</a>
+              <a href="#faq" class="block text-surface-500 hover:text-surface-700 transition-colors">FAQ</a>
+            </div>
+          </div>
+          <div>
+            <h4 class="font-semibold text-surface-800 mb-3">Company</h4>
+            <div class="space-y-2">
+              <a href="#drivers" class="block text-surface-500 hover:text-surface-700 transition-colors">Drive With Us</a>
+              <button onclick="openModal()" class="block text-surface-500 hover:text-surface-700 transition-colors">Join Waitlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-10 pt-6 border-t border-surface-100 text-center">
+        <p class="text-xs text-surface-400">&copy; 2026 Chauffit. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WAITLIST MODAL -->
+  <div id="waitlistModal" class="modal-backdrop fixed inset-0 z-[100] flex items-center justify-center bg-black/50 p-4">
+    <div class="modal-content bg-white rounded-2xl shadow-2xl w-full max-w-md p-8 relative">
+      <button onclick="closeModal()" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center text-surface-400 hover:text-surface-600 rounded-lg hover:bg-surface-50 transition-colors" aria-label="Close modal">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></svg>
+      </button>
+      <div id="waitlistForm">
+        <h3 class="text-xl font-bold text-surface-900">Get Early Access</h3>
+        <p class="mt-2 text-sm text-surface-500">We'll notify you when Chauffit launches in your city.</p>
+        <form onsubmit="submitWaitlist(event)" class="mt-6 space-y-4">
+          <div>
+            <label for="phone" class="block text-xs font-medium text-surface-600 mb-1.5">Phone Number <span class="text-rose-500">*</span></label>
+            <input type="tel" id="phone" name="phone" required placeholder="+91 98765 43210" class="w-full px-4 py-3 rounded-xl border border-surface-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-400 transition-all placeholder:text-surface-300">
+          </div>
+          <div>
+            <label for="city" class="block text-xs font-medium text-surface-600 mb-1.5">City <span class="text-rose-500">*</span></label>
+            <input type="text" id="city" name="city" required placeholder="e.g. Bengaluru" class="w-full px-4 py-3 rounded-xl border border-surface-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-400 transition-all placeholder:text-surface-300">
+          </div>
+          <div>
+            <label for="email" class="block text-xs font-medium text-surface-600 mb-1.5">Email <span class="text-surface-400">(optional)</span></label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" class="w-full px-4 py-3 rounded-xl border border-surface-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-400 transition-all placeholder:text-surface-300">
+          </div>
+          <button type="submit" class="w-full bg-brand-600 text-white font-semibold py-3.5 rounded-xl text-sm hover:bg-brand-700 transition-all shadow-lg shadow-brand-600/20 mt-2">
+            Join the Waitlist
+          </button>
+        </form>
+      </div>
+      <div id="waitlistSuccess" class="hidden text-center py-6">
+        <div class="w-16 h-16 mx-auto bg-green-50 rounded-full flex items-center justify-center mb-4">
+          <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+        </div>
+        <h3 class="text-xl font-bold text-surface-900">You're on the list.</h3>
+        <p class="mt-2 text-sm text-surface-500">We'll notify you when we launch in your city.</p>
+        <button onclick="closeModal()" class="mt-6 text-sm text-brand-600 font-medium hover:text-brand-700 transition-colors">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- DRIVER NOTIFY MODAL -->
+  <div id="driverModal" class="modal-backdrop fixed inset-0 z-[100] flex items-center justify-center bg-black/50 p-4">
+    <div class="modal-content bg-white rounded-2xl shadow-2xl w-full max-w-md p-8 relative">
+      <button onclick="closeDriverModal()" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center text-surface-400 hover:text-surface-600 rounded-lg hover:bg-surface-50 transition-colors" aria-label="Close modal">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></svg>
+      </button>
+      <div id="driverForm">
+        <h3 class="text-xl font-bold text-surface-900">Drive with Chauffit</h3>
+        <p class="mt-2 text-sm text-surface-500">Get notified when onboarding opens in your area.</p>
+        <form onsubmit="submitDriverForm(event)" class="mt-6 space-y-4">
+          <div>
+            <label for="driverPhone" class="block text-xs font-medium text-surface-600 mb-1.5">Phone Number <span class="text-rose-500">*</span></label>
+            <input type="tel" id="driverPhone" name="phone" required placeholder="+91 98765 43210" class="w-full px-4 py-3 rounded-xl border border-surface-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-400 transition-all placeholder:text-surface-300">
+          </div>
+          <div>
+            <label for="driverCity" class="block text-xs font-medium text-surface-600 mb-1.5">City <span class="text-rose-500">*</span></label>
+            <input type="text" id="driverCity" name="city" required placeholder="e.g. Bengaluru" class="w-full px-4 py-3 rounded-xl border border-surface-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-400 transition-all placeholder:text-surface-300">
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-surface-600 mb-1.5">Type <span class="text-rose-500">*</span></label>
+            <div class="flex gap-3">
+              <label class="flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-xl border border-surface-200 cursor-pointer hover:border-brand-300 transition-all has-[:checked]:border-brand-500 has-[:checked]:bg-brand-50">
+                <input type="radio" name="driverType" value="driver" checked class="sr-only">
+                <span class="text-sm font-medium text-surface-700">Driver</span>
+              </label>
+              <label class="flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-xl border border-surface-200 cursor-pointer hover:border-brand-300 transition-all has-[:checked]:border-brand-500 has-[:checked]:bg-brand-50">
+                <input type="radio" name="driverType" value="biker" class="sr-only">
+                <span class="text-sm font-medium text-surface-700">Biker</span>
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="w-full bg-surface-900 text-white font-semibold py-3.5 rounded-xl text-sm hover:bg-surface-800 transition-all mt-2">
+            Get Notified
+          </button>
+        </form>
+      </div>
+      <div id="driverSuccess" class="hidden text-center py-6">
+        <div class="w-16 h-16 mx-auto bg-green-50 rounded-full flex items-center justify-center mb-4">
+          <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+        </div>
+        <h3 class="text-xl font-bold text-surface-900">You're registered.</h3>
+        <p class="mt-2 text-sm text-surface-500">We'll reach out when onboarding opens in your city.</p>
+        <button onclick="closeDriverModal()" class="mt-6 text-sm text-brand-600 font-medium hover:text-brand-700 transition-colors">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
